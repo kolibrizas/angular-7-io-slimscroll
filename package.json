@@ -1,6 +1,6 @@
 {
-  "name": "angular-io-slimscroll",
-  "version": "2.3.3",
+  "name": "angular-7-io-slimscroll",
+  "version": "2.3.4",
   "license": "MIT",
   "description": "Slim scroll directive for angular2",
   "main": "./index.js",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rd-dev-ukraine/angular-io-slimscroll"
+    "url": "git+https://github.com/rd-dev-ukraine/angular-io-slimscroll.git"
   },
   "author": "Igor Turko <igor.turko@rd-dev.net>",
   "dependencies": {
@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/rd-dev-ukraine/angular-io-slimscroll/issues"
   },
-  "homepage": "https://github.com/rd-dev-ukraine/angular-io-slimscroll#readme"
+  "homepage": "https://github.com/rd-dev-ukraine/angular-io-slimscroll#readme",
+  "directories": {
+    "example": "example"
+  }
 }
