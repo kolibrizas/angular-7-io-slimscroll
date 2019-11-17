@@ -343,8 +343,8 @@ export class SlimScroll implements OnInit, OnDestroy {
         }
 
         let delta = 0;
-        if (e.wheelDelta) {
-            delta = -e.wheelDelta / 120;
+        if (e.deltaY) {
+            delta = e.deltaY / 120;
         }
         if (e.detail) {
             delta = e.detail / 3;
