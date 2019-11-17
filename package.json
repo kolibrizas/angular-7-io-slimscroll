@@ -1,47 +1,79 @@
 {
-  "name": "angular-io-slimscroll",
-  "version": "2.3.3",
-  "license": "MIT",
-  "description": "Slim scroll directive for angular2",
-  "main": "./index.js",
-  "typings": "./slimscroll.directive.d.ts",
-  "scripts": {
-    "start": "ng serve",
-    "prod": "ng build --prod --base-href \"angular-io-slimscroll\"",
-    "aot": "ng build --aot",
-    "deploy": "npm run prod && ngh",
-    "build": "tsc -p tsconfig.publish.json"
+  "_from": "angular-io-slimscroll",
+  "_id": "angular-io-slimscroll@2.3.3",
+  "_inBundle": false,
+  "_integrity": "sha512-rl+2rSjuZAZzm4Ymc0kB39ZHx6Wee3TU52gfyTChm2x5KrFLwsbrpQ+CY+Rk+MoB1zUzRLxPdH9QEVOT0naq7Q==",
+  "_location": "/angular-io-slimscroll",
+  "_phantomChildren": {
+    "tslib": "1.9.3"
   },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "angular-io-slimscroll",
+    "name": "angular-io-slimscroll",
+    "escapedName": "angular-io-slimscroll",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-io-slimscroll/-/angular-io-slimscroll-2.3.3.tgz",
+  "_shasum": "1507909423b883b6a8dc2c013fcab86fd3c92ffa",
+  "_spec": "angular-io-slimscroll",
+  "_where": "C:\\Users\\kolib\\source\\repos\\Chesstify\\Chesstify\\Chesstify\\ClientApp",
+  "author": {
+    "name": "Igor Turko",
+    "email": "igor.turko@rd-dev.net"
+  },
+  "bugs": {
+    "url": "https://github.com/rd-dev-ukraine/angular-io-slimscroll/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "core-js": "^2.5.4",
+    "rxjs": "~6.3.3",
+    "zone.js": "~0.8.26"
+  },
+  "deprecated": false,
+  "description": "Slim scroll directive for angular2",
+  "devDependencies": {
+	"@angular-devkit/build-angular": "~0.13.0",
+    "@angular/cli": "~7.3.6",
+    "@angular/compiler-cli": "~7.2.0",
+    "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "0.5.2",
+    "typescript": "2.6.2"
+  },
+  "homepage": "https://github.com/rd-dev-ukraine/angular-io-slimscroll#readme",
   "keywords": [
     "angular",
     "scroll",
     "slimScroll",
     "directive"
   ],
+  "license": "MIT",
+  "main": "./index.js",
+  "name": "angular-io-slimscroll",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rd-dev-ukraine/angular-io-slimscroll"
+    "url": "git+https://github.com/rd-dev-ukraine/angular-io-slimscroll.git"
   },
-  "author": "Igor Turko <igor.turko@rd-dev.net>",
-  "dependencies": {
-    "@angular/common": "5.1.2",
-    "@angular/compiler": "5.1.2",
-    "@angular/core": "5.1.2",
-    "@angular/platform-browser": "5.1.2",
-    "@angular/platform-browser-dynamic": "5.1.2",
-    "core-js": "2.5.3",
-    "rxjs": "5.5.5",
-    "zone.js": "0.8.18"
+  "scripts": {
+    "aot": "ng build --aot",
+    "build": "tsc -p tsconfig.publish.json",
+    "deploy": "npm run prod && ngh",
+    "prod": "ng build --prod --base-href \"angular-io-slimscroll\"",
+    "start": "ng serve"
   },
-  "devDependencies": {
-    "@angular/cli": "1.6.2",
-    "@angular/compiler-cli": "5.1.2",
-    "@types/node": "8.5.2",
-    "angular-cli-ghpages": "0.5.2",
-    "typescript": "2.6.2"
-  },
-  "bugs": {
-    "url": "https://github.com/rd-dev-ukraine/angular-io-slimscroll/issues"
-  },
-  "homepage": "https://github.com/rd-dev-ukraine/angular-io-slimscroll#readme"
+  "typings": "./slimscroll.directive.d.ts",
+  "version": "2.3.3"
 }
