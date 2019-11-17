@@ -73,6 +73,7 @@ var SlimScroll = /** @class */ (function () {
         this.barMouseUp = this.barMouseUp.bind(this);
         this.barMouseDown = this.barMouseDown.bind(this);
         this.railMouseDown = this.railMouseDown.bind(this);
+        this._eventOptions = { useCapture: false, passive: false };
     }
     SlimScroll.prototype.ngOnInit = function () {
         this.init();
@@ -316,11 +317,11 @@ var SlimScroll = /** @class */ (function () {
     ;
     SlimScroll.prototype.attachWheel = function (target) {
         if (window.addEventListener) {
-            target.addEventListener("DOMMouseScroll", this.onWheel, false);
-            target.addEventListener("mousewheel", this.onWheel, false);
+            target.addEventListener("DOMMouseScroll", this.onWheel, this._eventOptions);
+            target.addEventListener("mousewheel", this.onWheel, this._eventOptions);
         }
         else {
-            document.addEventListener("mousewheel", this.onWheel, false);
+            document.addEventListener("mousewheel", this.onWheel, this._eventOptions);
         }
     };
     ;
@@ -461,8 +462,8 @@ var SlimScroll = /** @class */ (function () {
         this._renderer.setStyle(body, "user-select", "none");
         this._barMouseDownPageY = e.pageY;
         this._startBarTop = parseFloat(this._bar.style.top);
-        document.addEventListener("mousemove", this.barMouseMove, false);
-        document.addEventListener("mouseup", this.barMouseUp, false);
+        document.addEventListener("mousemove", this.barMouseMove, this._eventOptions);
+        document.addEventListener("mouseup", this.barMouseUp, this._eventOptions);
         return false;
     };
     SlimScroll.prototype.setup = function () {
@@ -529,31 +530,31 @@ var SlimScroll = /** @class */ (function () {
         // append to parent div
         this._me.parentElement.appendChild(this._bar);
         this._me.parentElement.appendChild(this._rail);
-        this._bar.addEventListener("mousedown", this.barMouseDown, false);
+        this._bar.addEventListener("mousedown", this.barMouseDown, this._eventOptions);
         // on rail over
-        this._rail.addEventListener("mouseenter", this.showBar, false);
-        this._rail.addEventListener("mouseleave", this.hideBar, false);
-        this._rail.addEventListener("mousedown", this.railMouseDown, false);
+        this._rail.addEventListener("mouseenter", this.showBar, this._eventOptions);
+        this._rail.addEventListener("mouseleave", this.hideBar, this._eventOptions);
+        this._rail.addEventListener("mousedown", this.railMouseDown, this._eventOptions);
         // on bar over
-        this._bar.addEventListener("mouseenter", function () { return _this._isOverBar = true; }, false);
-        this._bar.addEventListener("mouseleave", function () { return _this._isOverBar = false; }, false);
+        this._bar.addEventListener("mouseenter", function () { return _this._isOverBar = true; }, this._eventOptions);
+        this._bar.addEventListener("mouseleave", function () { return _this._isOverBar = false; }, this._eventOptions);
         // show on parent mouseover
         this._me.addEventListener("mouseenter", function () {
             _this._isOverPanel = true;
             _this.showBar();
             _this.hideBar();
-        }, false);
+        }, this._eventOptions);
         this._me.addEventListener("mouseleave", function () {
             _this._isOverPanel = false;
             _this.hideBar();
-        }, false);
+        }, this._eventOptions);
         // support for mobile
         this._me.addEventListener("touchstart", function (e) {
             if (e.touches.length) {
                 // record where touch started
                 _this._touchDif = e.touches[0].pageY;
             }
-        }, false);
+        }, this._eventOptions);
         this._me.addEventListener("touchmove", function (e) {
             // prevent scrolling the page if necessary
             if (!_this._releaseScroll) {
@@ -566,7 +567,7 @@ var SlimScroll = /** @class */ (function () {
                 _this.scrollContent(diff, true);
                 _this._touchDif = e.touches[0].pageY;
             }
-        }, false);
+        }, this._eventOptions);
         // set up initial height
         this.getBarHeight();
         // hide bar on init if alwaysVisible equal false
